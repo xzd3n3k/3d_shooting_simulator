@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/zdenek/Documents/programming/cpp_projects/vrg_vstupni/src/main'
+relocations:     []
+...
