@@ -3,11 +3,13 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: clang build active file",
+			"label": "C/C++: clang build active file - custom",
 			"command": "/usr/bin/clang",
 			"args": [
 				"-std=c++23",
 				"-stdlib=libc++",
+				"-I",
+				"/Users/zdenek/Documents/programming/cpp_projects/vrg_vstupni/include",
 				"-fcolor-diagnostics",
 				"-fansi-escape-codes",
 				"-g",
@@ -26,12 +28,12 @@
 		},
 		{
 			"type": "cppbuild",
-			"label": "C/C++: clang++ build active file",
+			"label": "C/C++: clang++ build active file - custom",
 			"command": "/usr/bin/clang++",
 			"args": [
 				"-std=c++17",
-                "-I",
-                "/Users/zdenek/Documents/programming/cpp_projects/vrg_vstupni/include",
+				"-I",
+				"/Users/zdenek/Documents/programming/cpp_projects/vrg_vstupni/include",
 				"-fcolor-diagnostics",
 				"-fansi-escape-codes",
 				"-g",
@@ -50,6 +52,20 @@
 				"isDefault": true
 			},
 			"detail": "compiler: /usr/bin/clang++"
+		},
+		{
+			"label": "Run C++ in Terminal",
+			"type": "shell",
+			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"options": {
+				"cwd": "${fileDirname}",
+				"shell": "/bin/zsh"
+			},
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }
